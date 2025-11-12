@@ -43,7 +43,6 @@ const API_BASE_URL = "http://localhost:3000";
 
 // Motion Components
 const MotionPaper = motion(Paper);
-const MotionCard = motion(Card);
 const MotionBox = motion(Box);
 
 function Login() {
@@ -59,7 +58,7 @@ function Login() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const theme = useTheme();
+
 
   useEffect(() => {
     console.log('🚀 Componente Login montado');
