@@ -3,7 +3,6 @@ import { useLocation, Navigate } from 'react-router-dom';
 import EncabezadoPublico from '../Compartidos/EncabezadoPublico';
 import EncabezadoAdministrativo from '../Compartidos/EncabezadoAdministrador';
 import EncabezadoCliente from '../Compartidos/EncabezadoCliente';
-import EncabezadoRepartidor from '../Compartidos/EncabezadoRepartidor';
 import PieDePaginaCliente from '../Compartidos/PieDePaginaCliente';
 import PieDePaginaAdmin from '../Compartidos/PieDePaginaAdministrador';
 import PieDePagina from '../Compartidos/PieDePaginaPublico';
@@ -36,7 +35,7 @@ const LayoutConEncabezado = ({ children }) => {
     pieDePagina = <PieDePaginaCliente />;
   } else if (location.pathname.startsWith('/repartidor') || location.pathname.startsWith('/recepcion')) {
     if (!user || userType !== 'Repartidor') return <Navigate to="/" replace />;
-    encabezado = <EncabezadoRepartidor />;
+
     pieDePagina = <PieDePaginaRepartidor />;
   } else {
     encabezado = <EncabezadoPublico />;
