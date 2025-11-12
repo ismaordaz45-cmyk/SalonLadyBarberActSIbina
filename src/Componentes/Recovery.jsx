@@ -48,7 +48,7 @@ function Recovery() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const theme = useTheme();
+ 
 
   const handleChange = (e) => {
     const { name, value } = e.target;

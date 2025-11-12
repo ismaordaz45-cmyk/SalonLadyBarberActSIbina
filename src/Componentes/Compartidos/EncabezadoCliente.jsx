@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Home, Logout, Person, Store, CalendarToday, Security, StoreMallDirectoryOutlined, Storefront, Person2 } from '@mui/icons-material';
+import { Home, Logout, Storefront, Person2 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -9,7 +9,6 @@ const EncabezadoCliente = () => {
   const [active, setActive] = useState('inicio');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [nombreEmpresa, setNombreEmpresa] = useState('');
-  const [logoUrl, setLogoUrl] = useState('');
   const [showMFAModal, setShowMFAModal] = useState(false);
   const [qrData, setQrData] = useState('');
   const [isActivatingMFA, setIsActivatingMFA] = useState(false);

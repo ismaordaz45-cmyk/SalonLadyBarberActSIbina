@@ -71,7 +71,7 @@ function RegistroUsuarios() {
     }
 
     if (name === "password") {
-      const passwordRegex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]{8,15}$/;
+      const passwordRegex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ0-9!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]{5,20}$/;
       if (!passwordRegex.test(value)) {
         errors[name] = "Tener entre 8 y 15 caracteres.";
       } else {

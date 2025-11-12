@@ -22,7 +22,6 @@ import {
   IconButton,
   InputAdornment,
   Card,
-  CardContent,
   useTheme,
   alpha,
 } from "@mui/material";
@@ -34,9 +33,8 @@ import {
   Security,
   ArrowBack,
   PersonAdd,
-  Login as GoogleIcon, // Ícono para botón Google
   Email as EmailIcon, // Ícono para MFA por correo
-  Home, // Ícono para Home
+
 } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
 
