@@ -33,7 +33,7 @@ const EncabezadoCliente = () => {
         });
         const data = response.data;
         setNombreEmpresa(data.NombreEmpresa || 'Mi Dulcería');
-        setLogoUrl(data.Logo ? `data:image/jpeg;base64,${data.Logo}` : '');
+        
 
         // Verificar estado de MFA
         const mfaResponse = await axios.get(`${API_BASE_URL}/api/login/check-mfa`, { // Corrección de ruta
