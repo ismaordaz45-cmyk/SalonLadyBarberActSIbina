@@ -10,7 +10,7 @@ import { alpha } from "@mui/material/styles";
 const MySwal = withReactContent(Swal);
 
 // URL base del backend (ajustada para local; cambia si usas Render)
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://backendactividadsibina.onrender.com";
 
 function RegistroUsuarios() {
   const navigate = useNavigate();
@@ -693,7 +693,7 @@ function RegistroUsuarios() {
               <option value="">Selecciona una pregunta</option>
               <option value="¿Cuál es el nombre de tu primera mascota?">¿Cuál es el nombre de tu primera mascota?</option>
               <option value="¿En qué ciudad naciste?">¿En qué ciudad naciste?</option>
-              <option value="¿Cuál es el nombre de tu escuela primaria?">¿Cuál es el nombre de tu escuela primaria?</option>
+              <option value="¿Cuál es el nombre de tu artista favorito?">¿Cuál es el nombre de tu escuela primaria?</option>
             </select>
             {formErrors.preguntaSecreta && (
               <p style={{ 
@@ -777,7 +777,7 @@ function RegistroUsuarios() {
             >
               <option value="">Selecciona tu tipo de usuario</option>
               <option value="Cliente">Cliente</option>
-              <option value="Propietario">Propietario</option>
+            
             </select>
             {formErrors.tipousuario && (
               <p style={{ 
