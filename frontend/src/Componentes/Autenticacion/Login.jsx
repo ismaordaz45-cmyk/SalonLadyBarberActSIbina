@@ -38,7 +38,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 
 const MySwal = withReactContent(Swal);
-const API_BASE_URL = "https://salonladybarberbackend.onrender.com";
+export const API_BASE_URL = process.env.REACT_APP_API_URL || "https://salonladybarberbackend.onrender.com";
 
 // 🔐 Sanitizador de entrada para prevenir XSS
 const sanitizeInput = (value) =>

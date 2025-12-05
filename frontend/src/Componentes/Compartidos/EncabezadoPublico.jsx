@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { HomeRounded, PersonOutline } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';    
+import axios from 'axios';
+
+export const API_BASE_URL = process.env.REACT_APP_API_URL || "https://salonladybarberbackend.onrender.com";
 
 const EncabezadoPublico = () => {
   const [active, setActive] = useState('inicio');
@@ -14,7 +16,7 @@ const EncabezadoPublico = () => {
   useEffect(() => {
     const fetchPerfil = async () => {
       try {
-        const response = await axios.get('https://salonladybarberbackend.onrender.com/api/perfilF');
+        const response = await axios.get(`${API_BASE_URL}/api/perfilF`);
         const data = response.data;
         setNombreEmpresa(data.NombreEmpresa || 'Nombre no disponible');
         setLogoUrl(data.Logo ? `data:image/jpeg;base64,${data.Logo}` : '');

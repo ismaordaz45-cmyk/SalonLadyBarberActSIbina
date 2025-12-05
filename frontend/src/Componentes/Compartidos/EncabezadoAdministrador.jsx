@@ -3,6 +3,8 @@ import { LogoutOutlined, HomeOutlined, FileTextOutlined, UserOutlined, TeamOutli
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+export const API_BASE_URL = process.env.REACT_APP_API_URL || "https://salonladybarberbackend.onrender.com";
+
 const EncabezadoAdministrativo = () => {
   const [active, setActive] = useState('inicio');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,7 +17,7 @@ const EncabezadoAdministrativo = () => {
   useEffect(() => {
     const fetchPerfil = async () => {
       try {
-        const response = await axios.get('https://salonladybarberbackend.onrender.com/api/perfilF');
+        const response = await axios.get(`${API_BASE_URL}/api/perfilF`);
         const data = response.data;
 
         console.log('Datos recibidos del backend:', data); // Depuración

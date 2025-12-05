@@ -19,7 +19,7 @@ const { Footer } = Layout;
 const { Text } = Typography;
 
 // URL base del backend
-const API_BASE_URL = "https://salonladybarberbackend.onrender.com";
+export const API_BASE_URL = process.env.REACT_APP_API_URL || "https://salonladybarberbackend.onrender.com";
 
 const PieDePagina = () => {
   // Por ahora, datos estáticos (se puede volver a conectar al backend más adelante)
