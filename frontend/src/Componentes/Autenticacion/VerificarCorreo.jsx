@@ -9,7 +9,7 @@ import { alpha } from "@mui/material/styles";
 const MySwal = withReactContent(Swal);
 
 // URL base del backend
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://salonladybarberbackend.onrender.com";
 // 🔐 Sanitizador de entrada para prevenir XSS
 const sanitizeInput = (value) =>
   DOMPurify.sanitize(value, {

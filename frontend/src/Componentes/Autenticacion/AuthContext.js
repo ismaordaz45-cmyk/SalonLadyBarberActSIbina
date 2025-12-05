@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import { jwtDecode } from "jwt-decode";
 
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://salonladybarberbackend.onrender.com";
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {

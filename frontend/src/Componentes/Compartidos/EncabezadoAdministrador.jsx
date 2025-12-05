@@ -15,7 +15,7 @@ const EncabezadoAdministrativo = () => {
   useEffect(() => {
     const fetchPerfil = async () => {
       try {
-        const response = await axios.get('https://backendreservas-m2zp.onrender.com/api/perfilF');
+        const response = await axios.get('https://salonladybarberbackend.onrender.com/api/perfilF');
         const data = response.data;
 
         console.log('Datos recibidos del backend:', data); // Depuración

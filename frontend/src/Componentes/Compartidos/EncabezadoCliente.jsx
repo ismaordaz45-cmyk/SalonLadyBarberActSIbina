@@ -3,7 +3,7 @@ import { HomeRounded, LogoutRounded, Storefront, AccountCircle } from '@mui/icon
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://salonladybarberbackend.onrender.com";
 
 const EncabezadoCliente = () => {
   const [active, setActive] = useState('inicio');
