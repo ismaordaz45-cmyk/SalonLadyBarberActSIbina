@@ -65,7 +65,7 @@ const PieDePaginaAdmin = () => {
   return (
     <Layout>
       <Footer style={{
-        backgroundColor: ' #2C3E50',
+        backgroundColor: '#2C3E50',
         textAlign: 'center',
         padding: '40px 20px',
         width: '100%',
@@ -116,7 +116,7 @@ const PieDePaginaAdmin = () => {
         boxSizing: 'border-box'
       }}>
         <Text style={{ color: '#ffffff', fontSize: '16px' }}>
-          © {new Date().getFullYear()} Reserva de Alojamientos. Todos los derechos reservados.
+          © {new Date().getFullYear()} Lady Barber ID'M. Todos los derechos reservados.
         </Text>
       </div>
     </Layout>
