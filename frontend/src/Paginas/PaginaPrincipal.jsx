@@ -177,9 +177,9 @@ const PaginaPrincipal = () => {
           >
             Nuestras Categorías
           </Typography>
-          <Grid container spacing={3}> {/* Spacing 24px md ajustado */}
+          <Grid container spacing={4} alignItems="stretch"> {/* Spacing aumentado a 32px para más separación */}
             {categorias.map((categoria, index) => (
-              <Grid item xs={6} md={3} key={index}>
+              <Grid item xs={6} sm={3} md={2} key={index}>
                 <MotionCard
                   whileHover={{ scale: 1.05, rotate: 2 }} // Hover escala 5% + rotación sutil
                   whileTap={{ scale: 0.95 }}
@@ -210,6 +210,62 @@ const PaginaPrincipal = () => {
                 </MotionCard>
               </Grid>
             ))}
+            {/* Código QR */}
+            <Grid item xs={12} sm={6} md={4} sx={{ mt: { xs: 2, sm: 0 } }}>
+              <MotionBox
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+                whileHover={{ scale: 1.05 }}
+                sx={{
+                  textAlign: 'center',
+                  p: 4, // Más padding para más espacio
+                  backgroundColor: '#FFFFFF',
+                  borderRadius: 12,
+                  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
+                  border: `2px solid ${alpha('#2C3E50', 0.15)}`, // Borde más sutil
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  transition: 'all 200ms ease',
+                  mx: { xs: 0, md: 2 }, // Margen horizontal en desktop para separación
+                  '&:hover': {
+                    boxShadow: '0 10px 25px rgba(0, 0, 0, 0.15)',
+                    borderColor: alpha('#2C3E50', 0.3),
+                  },
+                }}
+              >
+                <Box
+                  component="img"
+                  src="/QR.png"
+                  alt="Código QR"
+                  sx={{
+                    width: '100%',
+                    maxWidth: '280px', // QR más grande
+                    height: 'auto',
+                    mb: 3, // Más espacio entre QR y texto
+                    mx: 'auto',
+                    display: 'block',
+                    alignSelf: 'center', // Centrado perfecto
+                  }}
+                />
+                <Typography
+                  variant="h4"
+                  fontWeight="600"
+                  color="#1A252F"
+                  fontFamily="'Geist Sans', Arial, sans-serif"
+                  sx={{
+                    textAlign: 'center',
+                    width: '100%',
+                    mt: 1,
+                  }}
+                >
+                  Escanea y descubre el producto en 3D
+                </Typography>
+              </MotionBox>
+            </Grid>
           </Grid>
         </Box>
 
